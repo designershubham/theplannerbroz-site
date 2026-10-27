@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 180" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158" />
+      <stop offset="30%" stop-color="#BF953F" />
+      <stop offset="60%" stop-color="#FCF6BA" />
+      <stop offset="80%" stop-color="#B38728" />
+      <stop offset="100%" stop-color="#FBF5B7" />
+    </linearGradient>
+    <linearGradient id="goldBarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B3F" />
+      <stop offset="50%" stop-color="#EED58E" />
+      <stop offset="100%" stop-color="#B38728" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Group with subtle 3D shadow effect -->
+  <g filter="url(#subtleShadow)">
+    <!-- "THE PLANNER" text in deep burgundy/maroon -->
+    <text x="24" y="82" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="58" fill="#3D111A" letter-spacing="1">THE PLANNER</text>
+    
+    <!-- Central decorative 4-point gold spear emblem -->
+    <g transform="translate(458, 70)">
+      <!-- Vertical spear -->
+      <polygon points="0,-42 7,0 0,42 -7,0" fill="url(#goldGradient)" />
+      <!-- Horizontal cross facets -->
+      <polygon points="0,-42 0,42 7,0" fill="#996515" opacity="0.6"/>
+      <polygon points="0,-42 0,42 -7,0" fill="#FCF6BA" opacity="0.8"/>
+    </g>
+
+    <!-- "BROZ" text in metallic gold -->
+    <text x="474" y="82" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="58" fill="url(#goldGradient)" letter-spacing="1.5">BROZ</text>
+  </g>
+
+  <!-- Horizontal Double Gold Bars -->
+  <g transform="translate(26, 102)">
+    <rect x="0" y="0" width="418" height="4" rx="2" fill="url(#goldBarGrad)" />
+    <rect x="444" y="0" width="170" height="4" rx="2" fill="url(#goldBarGrad)" />
+    <rect x="0" y="7" width="418" height="2" rx="1" fill="#C59B3F" opacity="0.75" />
+    <rect x="444" y="7" width="170" height="2" rx="1" fill="#C59B3F" opacity="0.75" />
+  </g>
+
+  <!-- Tagline: "We Plan, You Celebrate" in serif script -->
+  <text x="340" y="148" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-style="italic" font-weight="600" font-size="34" fill="#A8842E" filter="url(#subtleShadow)" letter-spacing="0.5">
+    We Plan, You Celebrate
+  </text>
+</svg>

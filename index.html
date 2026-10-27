@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Planner Broz — We Turn Ideas Into Experiences</title>
+  <meta name="description"
+    content="We Plan, You Celebrate. Bespoke luxury celebrations, hotels, retreats, and unforgettable stays by The Planner Broz." />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- 
+  =========================================================================================
+  CUSTOM CSS & EASY COLOR CUSTOMIZATION
+  Yahan se aap Colors, Fonts, Spacing aur Buttons manually change kar sakte hain:
+  =========================================================================================
+  -->
+  <!-- Custom Luxury Design Stylesheet (Separated for Performance & Clean Code) -->
+  <link rel="stylesheet" href="css/style.css?v=2.8" />
+  <!-- Services & 3D Rubber-Band Depth Carousel Stylesheet -->
+  <link rel="stylesheet" href="css/services.css" />
+</head>
+
+<body>
+
+  <!-- 
+  =========================================================================================
+  1. NAVIGATION BAR (Floating Centered Glassmorphic Capsule - Rounded & Compact)
+  Content or Links yahan edit karein:
+  =========================================================================================
+  -->
+  <div class="navbar-floating-wrapper">
+    <nav id="mainNavbar" class="navbar shadow-sm">
+      <div class="container-fluid d-flex justify-content-between align-items-center p-0">
+
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#heroSection">
+          <img src="assets/logo 2.webp" alt="The Planner Broz Logo" height="34" width="134" />
+        </a>
+
+        <!-- Center Navigation Pills -->
+        <div
+          class="d-none d-md-flex align-items-center gap-1 bg-white border border-light-subtle rounded-pill p-1 shadow-sm">
+          <a href="#tpbEventServicesSection" class="nav-pill-btn active" onclick="activateNav(this, event)">Event
+            Plans</a>
+          <a href="#tpbTravelServicesSection" class="nav-pill-btn" onclick="activateNav(this, event)">Travel Plans</a>
+          <a href="#testimonialsSection" class="nav-pill-btn" onclick="activateNav(this, event)">Reviews</a>
+        </div>
+        <!-- Right Action Items -->
+        <div class="d-flex align-items-center gap-3">
+          <button type="button" class="btn-navbar-signin" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Contact Now
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- 
+  =========================================================================================
+  2. HERO SECTION
+  Requested Corrections:
+  - Left column width reduced further (~25-30%, col-lg-4 col-xl-3) & left-aligned
+  - Search option removed, replaced with animated "Check Now" button
+  - Clean white empty background (no image)
+  - Right column kept completely empty as requested
+  =========================================================================================
+  -->
+  <section id="heroSection" class="hero-scroll-track">
+    <div class="hero-sticky-viewport">
+      <!-- 300-Frame Scroll Canvas -->
+      <canvas id="heroCanvas"></canvas>
+
+      <!-- Soft Gradient Overlay for Text Readability -->
+      <div class="hero-content-overlay"></div>
+
+      <!-- Corner Watermark Concealer (Completely conceals any residual bottom-right logo) -->
+      <div class="hero-watermark-cover"></div>
+
+      <!-- Hero Content Container (Preserved exactly as-is) -->
+      <div class="hero-content-container">
+        <div class="container-fluid px-4 px-md-5">
+          <div class="row align-items-center g-5">
+
+            <!-- LEFT COLUMN: Frosted Glass Panel for 100% Crisp Legibility with Maximum Background Frame Visibility -->
+            <div class="col-12 col-lg-7 col-xl-6 text-start">
+              <div class="hero-glass-card">
+                <!-- Designed Tagline Badge: We Plan, You Celebrate -->
+                <div class="hero-tagline-badge">
+                  <span class="hero-tagline-sparkle">✦</span>
+                  <span class="hero-tagline-text">We Plan, You Celebrate</span>
+                </div>
+
+                <!-- Headline: Luxury Typography with Downward Curved Accent under IDEAS & Brown EXPERIENCES -->
+                <h1 class="hero-headline mb-3">
+                  WE TURN YOUR <span class="hero-word-ideas">IDEAS<svg class="hero-ideas-curve" viewBox="0 0 100 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 2 3 C 25 15, 75 15, 98 3" stroke="url(#heroIdeasCurveGrad)" stroke-width="3.2" stroke-linecap="round" /><defs><linearGradient id="heroIdeasCurveGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#C59B3F" /><stop offset="50%" stop-color="#F4D06F" /><stop offset="100%" stop-color="#A87618" /></linearGradient></defs></svg></span><br />
+                  INTO MEMORABLE<br />
+                  <span class="hero-highlight-gold hero-highlight-brown">EXPERIENCES.</span>
+                </h1>
+
+                <!-- Explore Now Button: Matching Exact Reference Photo -->
+                <div class="mb-2">
+                  <a href="#tpbEventServicesSection" class="btn-explore-hero">
+                    <span>EXPLORE NOW</span>
+                    <span class="btn-icon-bubble">
+                      <i class="bi bi-arrow-right text-white"></i>
+                    </span>
+                  </a>
+                </div>
+
+                <!-- 3 Feature Points Below Button: Matching Exact Reference Photo -->
+                <div class="hero-features-row">
+                  <div class="hero-feature-item">
+                    <span class="hero-feature-icon-circle">
+                      <i class="bi bi-calendar3"></i>
+                    </span>
+                    <span class="hero-feature-text">Event Planning</span>
+                  </div>
+                  <div class="hero-feature-item">
+                    <span class="hero-feature-icon-circle">
+                      <i class="bi bi-airplane-fill"></i>
+                    </span>
+                    <span class="hero-feature-text">Travel Planning</span>
+                  </div>
+                  <div class="hero-feature-item">
+                    <span class="hero-feature-icon-circle">
+                      <i class="bi bi-heart"></i>
+                    </span>
+                    <span class="hero-feature-text">Made Around You</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Empty as requested by user (fixed background visible) -->
+            <div class="col-12 col-lg-5 col-xl-6 d-none d-lg-block">
+              <!-- Right column kept empty -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+  =========================================================================================
+  MAIN CONTENT LAYER (Slides OVER Fixed Hero like background-attachment: fixed)
+  =========================================================================================
+  -->
+  <div id="mainContentLayer" class="main-content-layer">
+
+    <!-- 
+  =========================================================================================
+  3. OUR STORY SECTION
+  =========================================================================================
+  -->
+    <section id="ourStorySection" class="our-story-section">
+      <!-- Corner Background Doodles (Matching Reference Photo) -->
+      <!-- Bottom-Left: Mountains, Sun, Palm Tree, Pathway -->
+      <svg class="story-doodle-bl" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <!-- Sun with radiating rays -->
+        <circle cx="100" cy="50" r="10" stroke="#D1B892" stroke-width="1.3" stroke-dasharray="2 2" />
+        <path d="M100 32v6M100 62v6M82 50h6M112 50h6M87 37l4 4M109 59l4 4M87 63l4-4M109 41l4-4" stroke="#D1B892"
+          stroke-width="1.3" />
+        <!-- Mountain peaks -->
+        <path d="M40 140L80 75L120 140" stroke="#D1B892" stroke-width="1.5" stroke-linejoin="round" />
+        <path d="M80 75L72 90M80 75L88 92" stroke="#D1B892" stroke-width="1.2" />
+        <path d="M95 140L135 85L175 140" stroke="#D1B892" stroke-width="1.5" stroke-linejoin="round" />
+        <path d="M135 85L128 98M135 85L142 100" stroke="#D1B892" stroke-width="1.2" />
+        <path d="M10 160L50 110L90 160" stroke="#D1B892" stroke-width="1.4" stroke-linejoin="round" />
+        <!-- Palm Tree on the left -->
+        <path d="M30 165Q26 125 35 100" stroke="#D1B892" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M35 100Q20 90 10 95M35 100Q25 80 18 82M35 100Q42 75 52 80M35 100Q50 90 58 100M35 100Q36 85 45 88"
+          stroke="#D1B892" stroke-width="1.3" stroke-linecap="round" />
+        <!-- Winding pathway -->
+        <path d="M20 178Q60 168 80 155T150 145" stroke="#D1B892" stroke-width="1.3" stroke-dasharray="3 3" />
+        <path d="M35 180Q75 172 95 160T165 148" stroke="#D1B892" stroke-width="1.3" stroke-dasharray="3 3" />
+      </svg>
+
+      <!-- Top-Right: Dotted Flight Path & Airplane -->
+      <svg class="story-doodle-tr" viewBox="0 0 160 130" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path d="M10 110Q60 30 130 20" stroke="#D1B892" stroke-width="1.4" stroke-dasharray="4 4" />
+        <g transform="translate(122, 10) rotate(42)">
+          <path d="M12 2L15 9L22 11L16 16L18 23L12 19L6 23L8 16L2 11L9 9L12 2Z" fill="#B88628" stroke="#B88628"
+            stroke-width="0.5" />
+        </g>
+      </svg>
+
+      <!-- Bottom-Right: Celebration Dining Setup -->
+      <svg class="story-doodle-br" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <!-- Canopy drapery -->
+        <path d="M50 40Q120 15 190 40" stroke="#D1B892" stroke-width="1.4" />
+        <path d="M50 40Q85 60 120 45Q155 60 190 40" stroke="#D1B892" stroke-width="1.2" />
+        <path d="M50 40v120M190 40v120" stroke="#D1B892" stroke-width="1.4" />
+        <path d="M50 40Q35 80 40 140M190 40Q205 80 200 140" stroke="#D1B892" stroke-width="1.2" />
+        <!-- Banquet Table -->
+        <path d="M75 115h90v45H75z" stroke="#D1B892" stroke-width="1.3" />
+        <path d="M70 115h100" stroke="#D1B892" stroke-width="1.5" />
+        <path d="M72 115Q85 135 120 130Q155 135 168 115" stroke="#D1B892" stroke-width="1.2" />
+        <!-- Banquet Chairs -->
+        <path d="M55 100h12v60H55zM173 100h12v60h-12z" stroke="#D1B892" stroke-width="1.2" />
+        <path d="M58 85h6v15h-6zM176 85h6v15h-6z" stroke="#D1B892" stroke-width="1.2" />
+        <!-- Plant in a pot on the left -->
+        <path d="M25 145h15l-3 18h-9z" stroke="#D1B892" stroke-width="1.2" />
+        <path d="M32 145Q22 130 18 135M32 145Q32 125 30 128M32 145Q42 130 46 134" stroke="#D1B892" stroke-width="1.2" />
+        <!-- Winding dotted ground trail -->
+        <path d="M10 165Q60 155 110 168T220 160" stroke="#D1B892" stroke-width="1.2" stroke-dasharray="3 3" />
+      </svg>
+
+      <div class="container px-4 px-lg-5 position-relative" style="z-index: 3; max-width: 1240px;">
+        <div class="row g-4 g-lg-5 align-items-center">
+
+          <!-- LEFT COLUMN: Story Content -->
+          <div class="col-12 col-lg-6 col-xl-6 text-start">
+            <!-- Kicker / Subtitle -->
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <span class="story-kicker-dot"></span>
+              <span class="story-kicker-text">OUR STORY</span>
+              <span class="story-kicker-line"></span>
+            </div>
+
+            <!-- Headline: Matching Exact Photo -->
+            <h2 class="story-heading">
+              <span class="story-heading-line1">From Ideas to</span>
+              <span class="story-heading-line2">
+                <span class="story-burgundy">Unforgettable</span>
+                <span class="story-gold">
+                  Experiences
+                  <!-- Golden Curved Flourish Underline -->
+                  <svg class="story-gold-flourish" viewBox="0 0 180 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12C50 2 130 2 178 11" stroke="#B88628" stroke-width="2.5" stroke-linecap="round" />
+                  </svg>
+                </span>
+              </span>
+            </h2>
+
+            <!-- Paragraph 1 -->
+            <p class="our-story-p mb-3">
+              The Planner Broz started with a simple belief — planning should feel <strong
+                class="story-highlight-burgundy">exciting, not stressful.</strong> We bring together event planning and
+              travel experiences to turn your ideas into well-organised, memorable moments.
+            </p>
+
+            <!-- Paragraph 2 -->
+            <p class="our-story-p mb-4">
+              From celebrations and corporate events to group trips and special journeys, we focus on understanding what
+              you want, planning every detail carefully, and creating experiences you'll be happy to remember.
+            </p>
+
+            <!-- "Our Vision" Feature Block -->
+            <div class="story-vision-wrap">
+              <!-- Target / Bullseye with arrow icon -->
+              <div class="story-vision-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                  <path d="m14 10 7-7"></path>
+                  <path d="M21 3h-5"></path>
+                  <path d="M21 3v5"></path>
+                </svg>
+              </div>
+
+              <!-- Vertical Divider Line -->
+              <div class="story-vision-divider"></div>
+
+              <!-- Vision Content -->
+              <div class="story-vision-content">
+                <h4 class="story-vision-title">Our Vision</h4>
+                <p class="story-vision-desc mb-0">
+                  To create thoughtful events and journeys where every detail matters and every moment feels worth
+                  remembering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Visual Frame & Floating Badges -->
+          <div class="col-12 col-lg-6 col-xl-6">
+            <div class="story-visual-container">
+
+              <!-- Deep Burgundy Offset Background Shape -->
+              <div class="story-image-backdrop"></div>
+
+              <!-- Organic Pebble Curved Image Card with Gold Border -->
+              <div class="story-image-card">
+                <img src="assets/our-story-founders.webp" alt="The Planner Broz Co-founders collaborating" loading="lazy" decoding="async" />
+              </div>
+
+              <!-- Floating Badge 1: Mountains (Left) with Sparkle Rays -->
+              <div class="story-sparkle-mountain">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#B88628" stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path d="M10 1v4M3 8l3-2M17 8l-3-2" />
+                </svg>
+              </div>
+              <div class="story-badge-mountain" title="Travel Experiences">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m8 3 4 8 5-5 5 11H2L8 3z"></path>
+                  <path d="M6.5 13.5 8 11l2 2.5"></path>
+                  <path d="m15 10 2 2.5 2-1.5"></path>
+                </svg>
+              </div>
+
+              <!-- Floating Badge 2: Clinking Glasses (Bottom-Right) with Sparkle Rays -->
+              <div class="story-sparkle-cheers">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#B88628" stroke-width="1.5"
+                  stroke-linecap="round">
+                  <path d="M10 1v4M3 8l3-2M17 8l-3-2" />
+                </svg>
+              </div>
+              <div class="story-badge-cheers" title="Celebrations & Events">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 3l3 8a3 3 0 0 1-2.5 3.8L7 15v5m-3 0h6"></path>
+                  <path d="M17 3l-3 8a3 3 0 0 0 2.5 3.8L17 15v5m-3 0h6"></path>
+                  <circle cx="12" cy="5" r="1" fill="#ffffff"></circle>
+                  <circle cx="10" cy="2" r="0.75" fill="#ffffff"></circle>
+                  <circle cx="14" cy="2" r="0.75" fill="#ffffff"></circle>
+                </svg>
+              </div>
+
+              <!-- Floating Handwritten Sticker Note: "We Plan, You Celebrate ♡" -->
+              <div class="story-sticker-note">
+                <span class="story-sticker-line1">We Plan,</span>
+                <span class="story-sticker-line2">You Celebrate <span class="story-sticker-heart">♡</span></span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+  =========================================================================================
+  3.5 MEET THE OWNERS / CO-FOUNDERS VIP 3D LANYARDS
+  =========================================================================================
+  -->
+    <section id="ownersSection" class="owners-lanyard-section">
+      <!-- Ambient Glows -->
+      <div class="owners-glow-1"></div>
+      <div class="owners-glow-2"></div>
+
+      <div class="container px-4 px-lg-5 position-relative" style="z-index: 2; max-width: 1240px;">
+
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+          <div class="d-inline-flex align-items-center gap-2 mb-2">
+            <span class="story-kicker-dot"></span>
+            <span class="story-kicker-text">LEADERSHIP &amp; FOUNDERS</span>
+            <span class="story-kicker-line"></span>
+          </div>
+
+          <h2 class="story-heading mb-3">
+            <span class="story-heading-line1">The Minds Behind</span>
+            <span class="story-heading-line2">
+              <span class="story-burgundy">The</span>
+              <span class="story-gold">
+                Magic
+                <!-- Golden Curved Flourish Underline -->
+                <svg class="story-gold-flourish" viewBox="0 0 180 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12C50 2 130 2 178 11" stroke="#B88628" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+              </span>
+            </span>
+          </h2>
+
+          <p class="mx-auto our-story-p text-center mb-3" style="max-width: 660px;">
+            Meet the two co-founders behind <strong class="story-highlight-burgundy">The Planner Broz</strong> — uniting
+            flawless operational planning with immersive luxury travel &amp; bespoke celebrations.
+          </p>
+
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill"
+            style="background: rgba(197, 155, 63, 0.12); border: 1px solid rgba(197, 155, 63, 0.3);">
+            <span style="color: #C59B3F; font-size: 13px;">✦</span>
+            <span style="font-size: 12px; font-weight: 600; color: #3D111A;">
+              Interactive VIP Lanyards: Drag to swing · Click card to flip for Social QR &amp; Signature
+            </span>
+            <span style="color: #C59B3F; font-size: 13px;">✦</span>
+          </div>
+        </div>
+
+        <!-- 2 Lanyard ID Cards Grid -->
+        <div class="row g-4 justify-content-center">
+
+          <!-- Owner 1: Rishabh Rajput -->
+          <div class="col-12 col-lg-6">
+            <div class="owners-card-wrapper">
+
+              <!-- Top Pill -->
+              <div class="d-flex justify-content-between align-items-center w-100 mb-2 px-2">
+                <span class="badge px-3 py-2 rounded-pill"
+                  style="background: #3D111A; color: #F4D06F; font-weight: 600; font-size: 11px; letter-spacing: 0.08em;">
+                  CO-FOUNDER · TPB-001
+                </span>
+                <span class="small text-muted fw-semibold" style="font-size: 11.5px; letter-spacing: 0.05em;">
+                  OPERATIONS &amp; PLANNING
+                </span>
+              </div>
+
+              <!-- Lanyard Physics Stage -->
+              <div class="idcl-stage-container" id="lanyardStageAryan">
+                <!-- Javascript will mount the interactive canvas and swinging card here -->
+              </div>
+
+              <!-- Bottom Profile Info & Direct CTA -->
+              <div class="w-100 text-center pt-3 border-top mt-2" style="border-color: rgba(197, 155, 63, 0.25);">
+                <h5 class="fw-bold mb-1" style="color: #22070D; font-size: 18px;">Rishabh Rajput</h5>
+                <p class="small text-muted mb-2 px-2">Leads planning, client coordination, budgets &amp; end-to-end
+                  event
+                  operations.</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="https://wa.me/919718470384" target="_blank" rel="noreferrer"
+                    class="btn btn-sm px-3 rounded-pill"
+                    style="background: #3D111A; color: #F4D06F; font-size: 12px; font-weight: 600;">
+                    <i class="bi bi-whatsapp me-1"></i> Direct WhatsApp
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Owner 2: Rishabh Rajput (Duplicate) -->
+          <div class="col-12 col-lg-6">
+            <div class="owners-card-wrapper">
+
+              <!-- Top Pill -->
+              <div class="d-flex justify-content-between align-items-center w-100 mb-2 px-2">
+                <span class="badge px-3 py-2 rounded-pill"
+                  style="background: #3D111A; color: #F4D06F; font-weight: 600; font-size: 11px; letter-spacing: 0.08em;">
+                  CO-FOUNDER · TPB-001
+                </span>
+                <span class="small text-muted fw-semibold" style="font-size: 11.5px; letter-spacing: 0.05em;">
+                  OPERATIONS &amp; PLANNING
+                </span>
+              </div>
+
+              <!-- Lanyard Physics Stage -->
+              <div class="idcl-stage-container" id="lanyardStageKabir">
+                <!-- Javascript will mount the interactive canvas and swinging card here -->
+              </div>
+
+              <!-- Bottom Profile Info & Direct CTA -->
+              <div class="w-100 text-center pt-3 border-top mt-2" style="border-color: rgba(197, 155, 63, 0.25);">
+                <h5 class="fw-bold mb-1" style="color: #22070D; font-size: 18px;">Rishabh Rajput</h5>
+                <p class="small text-muted mb-2 px-2">Leads planning, client coordination, budgets &amp; end-to-end
+                  event
+                  operations.</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="https://wa.me/919718470384" target="_blank" rel="noreferrer"
+                    class="btn btn-sm px-3 rounded-pill"
+                    style="background: #3D111A; color: #F4D06F; font-size: 12px; font-weight: 600;">
+                    <i class="bi bi-whatsapp me-1"></i> Direct WhatsApp
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+    =========================================================================================
+    3.8 THE PLANNER BROZ — EVENT SERVICES & TRAVEL SERVICES (PREMIUM 3D SECTIONS)
+    Matching Reference Image Layout & Color Palette
+    =========================================================================================
+    -->
+    <!-- SVG ClipPath for Multi-Wave Organic Banner Bottom Curve -->
+    <svg id="tpbSvgCurveDefs" width="0" height="0" style="position: absolute; width: 0; height: 0; pointer-events: none;" aria-hidden="true">
+      <defs>
+        <clipPath id="tpbHeroCurvePath" clipPathUnits="objectBoundingBox">
+          <path
+            d="M 0,0.05 C 0,0.02 0.02,0 0.04,0 L 0.96,0 C 0.98,0 1,0.02 1,0.05 L 1,0.96 C 0.96,0.985 0.88,0.995 0.72,0.995 C 0.56,0.995 0.48,0.97 0.38,0.955 C 0.28,0.94 0.20,0.965 0.12,0.98 C 0.06,0.985 0.02,0.975 0,0.96 Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div id="tpbServicesRoot" class="tpb-services-master-container">
+      <!-- 1. EVENT SERVICES SECTION -->
+      <section id="tpbEventServicesSection" class="tpb-service-block">
+        <!-- Built dynamically by js/services.js using EVENT_SERVICES_CONFIG in js/services-data.js -->
+      </section>
+
+      <!-- 2. TRAVEL SERVICES SECTION (With Generous Spacing & Reverse 3D Depth Carousel) -->
+      <section id="tpbTravelServicesSection" class="tpb-service-block">
+        <!-- Built dynamically by js/services.js using TRAVEL_SERVICES_CONFIG in js/services-data.js -->
+      </section>
+    </div>
+
+
+
+    <!-- 
+  =========================================================================================
+  7. CLIENT TESTIMONIALS SECTION
+  =========================================================================================
+  -->
+    <section id="testimonialsSection" class="py-5 border-top">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row g-5 align-items-center">
+
+          <!-- Left Column: Heading & Controls -->
+          <div class="col-12 col-lg-5">
+            <span class="fw-bold small text-uppercase mb-3 d-block" style="color: var(--brand-burgundy);">
+              <span class="badge rounded-circle p-1 me-1" style="background: var(--brand-gold);"> </span>
+              Client Stories & Testimonials
+            </span>
+
+            <h2 class="h2 fw-normal lh-base text-dark mb-4">
+              Here&apos;s what people have to say about working together. Real moments, real experiences, real feedback.
+            </h2>
+
+            <!-- Prev / Next Controls -->
+            <div class="d-flex align-items-center gap-3 pt-2">
+              <button type="button" aria-label="Previous review" onclick="prevTestimonial()"
+                class="btn btn-outline-custom rounded-circle p-2 px-3 me-2">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button type="button" aria-label="Next review" onclick="nextTestimonial()"
+                class="btn btn-gold rounded-circle p-2 px-3">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Review Quote Card -->
+          <div class="col-12 col-lg-7">
+            <div class="bg-white rounded-4 p-4 p-sm-5 border shadow-sm position-relative overflow-hidden"
+              style="border-color: rgba(0,0,0,0.08);">
+              <div class="mb-3 text-warning opacity-75 fs-1">
+                <i class="bi bi-quote"></i>
+              </div>
+
+              <h3 id="testHeadline" class="h4 fw-bold text-dark mb-3">
+                &ldquo;The Planner Broz made our destination wedding completely magical and stress-free.&rdquo;
+              </h3>
+
+              <p id="testQuote" class="text-muted leading-relaxed mb-4">
+                From villa bookings across Lake Pichola to chartered logistics and royal decor, the team handled every
+                detail with effortless perfection. Our 300 guests are still talking about it.
+              </p>
+
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <div class="d-flex align-items-center gap-3">
+                  <img id="testAvatar"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                    alt="Aarav & Meera Kapoor" class="rounded-circle object-fit-cover shadow-sm" width="48"
+                    height="48" />
+                  <div>
+                    <h5 id="testAuthor" class="mb-0 fw-bold text-dark fs-6">Aarav & Meera Kapoor</h5>
+                    <small id="testLocation" class="text-muted">Destination Wedding, Udaipur</small>
+                  </div>
+                </div>
+
+                <div class="text-warning">
+                  <i class="bi bi-star-fill me-1"></i>
+                  <i class="bi bi-star-fill me-1"></i>
+                  <i class="bi bi-star-fill me-1"></i>
+                  <i class="bi bi-star-fill me-1"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+  =========================================================================================
+  8. FAQS ACCORDION
+  =========================================================================================
+  -->
+    <section class="py-5" id="faqSection">
+      <div class="container-fluid px-4 px-md-5">
+        <div class="row g-5 align-items-start">
+
+          <div class="col-12 col-lg-7">
+            <span class="fw-bold small text-uppercase mb-2 d-block" style="color: var(--brand-burgundy);">
+              <span class="badge rounded-circle p-1 me-1" style="background: var(--brand-gold);"> </span> FAQs &amp;
+              Assistance
+            </span>
+            <h2 class="h2 fw-bold text-dark mb-3">Got Questions? We're Here to Help.</h2>
+            <p class="text-muted small mb-4">
+              Find quick answers to common questions about booking, bespoke celebration coordination, payment options,
+              and
+              more.
+            </p>
+
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ 1 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    1. How do I book an event or trip with The Planner Broz?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    Simply contact us and share your event or travel plan, date, location and requirements. We’ll discuss the details with you and create a plan that fits your needs and budget.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    2. How much does an event or trip cost?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    There is no fixed price because every requirement is different. We first understand what you need, then share a clear quotation based on your selected services.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    3. Can I customise the event or trip according to my budget?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    Yes. We can adjust the plan, services and arrangements according to your budget while keeping the experience comfortable and well planned.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                    4. Do you handle everything on the event/trip day?
+                  </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    Yes. Once the plan is finalised, our team coordinates the agreed arrangements so you can focus on enjoying the event or journey.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                    5. What happens if my plans change after booking?
+                  </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    Just let us know as early as possible. We’ll check what changes can be made based on the bookings already confirmed and the applicable cancellation or change terms.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                    6. Can you arrange transport, hotels and other bookings for trips?
+                  </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small">
+                    Yes. Depending on your package, we can help arrange transportation, stays, meals, sightseeing and other agreed travel requirements.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="rounded-4 overflow-hidden shadow-lg position-sticky" style="top: 100px; height: 500px;">
+              <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1000&auto=format&fit=crop"
+                alt="Poolside Luxury Lounge" class="w-100 h-100 object-fit-cover" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+  =========================================================================================
+  8. FOOTER SECTION
+  =========================================================================================
+  -->
+    <footer class="w-100 p-0 m-0"
+      style="background: linear-gradient(180deg, #240A10 0%, #1A060B 60%, #120306 100%) !important; width: 100% !important;">
+      <div class="footer-container"
+        style="background: transparent !important; padding: 65px 24px 35px 24px; max-width: 1200px; margin: 0 auto; width: 100%;">
+
+        <!-- Top CTA -->
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+          <span class="badge rounded-pill px-3 py-2 mb-3"
+            style="background: rgba(255,255,255,0.1); color: #F4D06F; border: 1px solid rgba(197,155,63,0.3); font-size: 12px;">
+            ✨ Bespoke Celebrations &amp; Stays
+          </span>
+          <h2 class="h1 fw-bold text-white mb-3">Discover Places You'll Never Want to Leave</h2>
+          <p class="text-white-50 small mb-4">
+            Your next great experience is waiting. We plan every single detail so you can celebrate without stress.
+          </p>
+          <a href="#heroSection" class="btn btn-gold px-5 py-3 rounded-pill fw-bold text-white shadow-sm"
+            data-bs-toggle="modal" data-bs-target="#contactModal">
+            Plan Your Experience <i class="bi bi-arrow-up-right ms-2"></i>
+          </a>
+        </div>
+
+        <!-- Giant Brand Logo Watermark -->
+        <div class="footer-huge-logo text-center my-4 my-md-5"
+          style="text-align: center; width: 100%; display: block; white-space: nowrap;">
+          THE PLANNER BROZ
+        </div>
+
+        <!-- Bottom Info (Aligned Cleanly) -->
+        <div class="row pt-4 border-top text-white-50 small g-3 align-items-center"
+          style="border-top: 1px solid rgba(197, 155, 63, 0.25) !important;">
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <div class="text-white fw-bold fs-6">The Planner Broz</div>
+            <div style="color: var(--brand-gold-light, #F4D06F);" class="fst-italic mb-2">We Plan, You Celebrate</div>
+            <div>Email: <a href="mailto:info@theplannerbroz.com" class="text-decoration-none"
+                style="color: #F4D06F;">info.tpbevent@gmail.com</a></div>
+            <div>Phone: <span style="color: #F4D06F;">+91 9718470384, +91 7838195363</span></div>
+            <div>Address: A-332, South Gamri Near Bhajanpura, North East
+              Delhi-110053</div>
+          </div>
+
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <div>&copy; 2026 The Planner Broz. All Rights Reserved.</div>
+            <div class="mt-2 d-flex flex-wrap justify-content-center justify-content-md-end gap-3">
+              <a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a>
+              <span class="text-white-50 d-none d-md-inline">•</span>
+              <a href="#" class="text-white-50 text-decoration-none">Terms of Use</a>
+              <span class="text-white-50 d-none d-md-inline">•</span>
+              <a href="#" class="text-white-50 text-decoration-none">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </div> <!-- End #mainContentLayer -->
+
+
+
+  <!-- 
+  =========================================================================================
+  MODAL: CONTACT NOW MODAL
+  =========================================================================================
+  -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 p-4 shadow-lg">
+        <div class="modal-header border-0 pb-1">
+          <div>
+            <span class="badge rounded-pill px-3 py-1 mb-2"
+              style="background: rgba(61,17,26,0.08); color: var(--brand-burgundy); border: 1px solid rgba(197,155,63,0.3); font-size: 11px;">
+              <i class="bi bi-stars" style="color: var(--brand-gold);"></i> WE PLAN, YOU CELEBRATE
+            </span>
+            <h4 class="modal-title fw-bold text-dark">Contact The Planner Broz</h4>
+            <p class="text-muted small mb-0">Direct luxury concierge for bespoke events, travels & bookings.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body pt-3">
+          <div class="d-flex gap-2 mb-3">
+            <a href="tel:+919718470384" class="btn btn-sm btn-light border flex-fill text-dark fw-semibold py-2">
+              <i class="bi bi-telephone-fill text-gold me-1" style="color: var(--brand-gold);"></i> +91 97184 70384
+            </a>
+            <a href="mailto:info.tpbevent@gmail.com"
+              class="btn btn-sm btn-light border flex-fill text-dark fw-semibold py-2">
+              <i class="bi bi-envelope-fill text-gold me-1" style="color: var(--brand-gold);"></i> Email Concierge
+            </a>
+          </div>
+
+          <!-- Validated Luxury Contact Form -->
+          <form id="tpbContactForm" class="tpb-contact-form" novalidate>
+            <div class="mb-3">
+              <label for="tpbName" class="form-label">Your Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="tpbName" class="form-control" placeholder="e.g. Rahul Sharma" autocomplete="name" required />
+              <div class="invalid-feedback">Please enter your full name (minimum 2 letters).</div>
+            </div>
+
+            <div class="row g-2 mb-3">
+              <div class="col-12 col-sm-6">
+                <label for="tpbPhone" class="form-label">Phone / WhatsApp <span class="text-danger">*</span></label>
+                <input type="tel" id="tpbPhone" class="form-control" placeholder="+91 97184 70384" autocomplete="tel" required />
+                <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <label for="tpbEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" id="tpbEmail" class="form-control" placeholder="rahul@example.com" autocomplete="email" required />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="tpbService" class="form-label">Service Type <span class="text-danger">*</span></label>
+              <select id="tpbService" class="form-select" required>
+                <option value="" disabled selected>What you want to plan</option>
+                <option value="Event planning">Event planning</option>
+                <option value="Travel planning">Travel planning</option>
+                <option value="Customized your plan">Customized your plan</option>
+              </select>
+              <div class="invalid-feedback">Please select what you want to plan.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="tpbMessage" class="form-label">Occasion or Destination Details <span class="text-danger">*</span></label>
+              <textarea id="tpbMessage" class="form-control" rows="3"
+                placeholder="Share your planned dates, expected guest count, destination preferences, or decor vision..." required></textarea>
+              <div class="invalid-feedback">Please provide details about your event or travel plan (min 5 characters).</div>
+            </div>
+
+            <button type="submit" id="tpbSubmitBtn" class="btn btn-gold w-100 py-2 fw-semibold">
+              <i class="bi bi-send me-1"></i> Submit Contact Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  =========================================================================================
+  MODAL: BESPOKE LUXURY THANK YOU CONFIRMATION POPUP MODAL
+  =========================================================================================
+  -->
+  <div class="modal fade tpb-thankyou-modal" id="tpbThankYouModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 520px;">
+      <div class="modal-content tpb-thankyou-content border-0 shadow-lg text-center">
+        <!-- Close Button -->
+        <button type="button" class="btn-close btn-close-white tpb-thankyou-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <div class="modal-body p-4 p-md-5">
+          <!-- Animated Golden Checkmark Circle with Aura -->
+          <div class="tpb-thankyou-icon-wrapper mb-3">
+            <div class="tpb-thankyou-icon-aura"></div>
+            <div class="tpb-thankyou-icon-circle">
+              <i class="bi bi-check-lg"></i>
+            </div>
+            <div class="tpb-thankyou-sparkle-1">✦</div>
+            <div class="tpb-thankyou-sparkle-2">✦</div>
+          </div>
+
+          <!-- Badge Pill -->
+          <div class="mb-2">
+            <span class="tpb-thankyou-badge">
+              <i class="bi bi-stars"></i> INQUIRY TRANSMITTED
+            </span>
+          </div>
+
+          <!-- Main Title -->
+          <h3 class="tpb-thankyou-title mb-1">
+            Thank You, <span id="tpbThankYouClientName" style="color: #F4D06F;">Guest</span>!
+          </h3>
+
+          <!-- Golden Handwritten Script Subtitle -->
+          <div class="tpb-hero-script tpb-thankyou-script mb-3">
+            We Plan, You Celebrate
+          </div>
+
+          <!-- Description -->
+          <p class="tpb-thankyou-desc mb-4">
+            Aapki inquiry hamare lead concierge team ko <strong>info.tpbevent@gmail.com</strong> par safely receive ho chuki hai. Our senior planning team will connect with you within <strong>2 to 4 hours</strong>.
+          </p>
+
+          <!-- Inquiry Summary Card -->
+          <div class="tpb-thankyou-summary-card mb-4 text-start">
+            <div class="row g-2">
+              <div class="col-6">
+                <span class="tpb-summary-label">Reference ID</span>
+                <span class="tpb-summary-value text-warning" id="tpbThankYouRefId">TPB-849201</span>
+              </div>
+              <div class="col-6">
+                <span class="tpb-summary-label">Status</span>
+                <span class="tpb-summary-value text-success">
+                  <i class="bi bi-check-circle-fill me-1"></i> Priority Queue
+                </span>
+              </div>
+              <div class="col-12 mt-2 pt-2 border-top border-white border-opacity-10">
+                <span class="tpb-summary-label">Selected Experience</span>
+                <span class="tpb-summary-value" id="tpbThankYouService">Event planning</span>
+              </div>
+              <div class="col-6 mt-2 pt-2 border-top border-white border-opacity-10">
+                <span class="tpb-summary-label">Client Contact</span>
+                <span class="tpb-summary-value" id="tpbThankYouContact">+91 97184 70384</span>
+              </div>
+              <div class="col-6 mt-2 pt-2 border-top border-white border-opacity-10">
+                <span class="tpb-summary-label">Delivered To</span>
+                <span class="tpb-summary-value" style="color: #F4D06F; font-size: 12px;">info.tpbevent@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-column flex-sm-row gap-2">
+            <a id="tpbWhatsAppDirectBtn" href="https://wa.me/919718470384" target="_blank" class="btn tpb-btn-whatsapp flex-fill">
+              <i class="bi bi-whatsapp me-2"></i> Chat on WhatsApp
+            </a>
+            <button type="button" class="btn tpb-btn-dismiss flex-fill" data-bs-dismiss="modal">
+              Explore Website
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3.3 JS Bundle (Popper included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- The Planner Broz Single All-In-One Master Application Script -->
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
