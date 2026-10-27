@@ -1,20 +1,14 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# The Planner Broz — Official Website
 
-# Run and deploy your AI Studio app
+> **We Plan, You Celebrate**  
+> Bespoke luxury celebrations, corporate experiences, private retreats, and destination events.
 
-This contains everything you need to run your app locally.
+## Features
+- **300-Frame Scroll Canvas Animation**: Ultra-smooth cinematic hero section.
+- **Dynamic 3D Elastic Carousel**: Interactive Event & Travel Plans.
+- **Interactive Founders ID Lanyards**: Realistic physics-based dragging cards with QR and WhatsApp connect.
+- **Client Concierge Modal**: Direct validated inquiry dispatch to `info.tpbevent@gmail.com`.
+- **Pure Static Architecture**: Maximum Lighthouse performance with zero build latency.
 
-View your app in AI Studio: https://ai.studio/apps/8c0672cc-f37d-4441-b576-5010f7fb3a21
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+---
+© 2026 The Planner Broz. All rights reserved.
